@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'includes/messages.html' %}
+
+<!--simple user registration form with center align-->
+<div style="align-items:center; margin-top: 150px;" class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">User Registration</h3>
+                </div>
+                <div class="card-body">
+                    <form action="{% url 'register' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username" class="form-control">
+                        </div>
+                        <div class="form-group
+                                ">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" class="form-control">
+                        </div>
+                        <div class="form-group
+                                ">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" class="form-control">
+                        </div>
+                        <div class="form-group
+                                ">
+                            <label for="password2">Confirm Password</label>
+                            <input type="password" name="password2" id="password2" class="form-control">
+                        </div>
+                        Already have an account? <a href="{% url 'login' %}" style="color: blue">Login</a>
+                        <div class="form-group
+                                ">
+
+                            <div class="g-recaptcha" data-sitekey="6LfJc0kjAAAAAI-L8Px4ww1jMAjY7AMGO0DWkjgD"></div>
+
+                            <button data-sitekey="6LfJc0kjAAAAAI-L8Px4ww1jMAjY7AMGO0DWkjgD">Register</button>
+                        
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

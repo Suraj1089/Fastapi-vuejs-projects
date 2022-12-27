@@ -1,0 +1,9 @@
+<form method="post">
+  {% csrf_token %}
+  
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+  <script src='https://www.google.com/recaptcha/api.js?render=6Lc7bkkjAAAAADj7JytMUhnDC-EpUgqHo3umaacf'></script>
+  <div class="g-recaptcha" data-sitekey="6Lc7bkkjAAAAADj7JytMUhnDC-EpUgqHo3umaacf"></div>
+
+  <button type="submit" class="btn btn-primary">Post</button>
+</form>
