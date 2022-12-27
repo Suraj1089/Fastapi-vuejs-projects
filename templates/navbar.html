@@ -89,14 +89,14 @@
                 {% if user.is_authenticated %}
 
                 <li class="nav-item ms-3">
-                    <a class="nav-link custom-btn custom-border-btn btn" href="{% url 'logout' %}" onclick="">Logout</a>
+                    <a class="nav-link custom-btn custom-border-btn btn" href="" onclick="">Logout</a>
                 </li>
                 <li class="nav-item ms-3">
-                    <a class="nav-link custom-btn custom-border-btn btn" href="{% url 'dashboard' %}" onclick="">Dashboard</a>
+                    <a class="nav-link custom-btn custom-border-btn btn" href="" onclick="">Dashboard</a>
                 </li>
                 {% else %}
                 <li class="nav-item ms-3">
-                    <a class="nav-link custom-btn custom-border-btn btn" href="{% url 'login' %}" onclick="">Login</a>
+                    <a class="nav-link custom-btn custom-border-btn btn" href="" onclick="">Login</a>
                 </li>
                 {% endif %}
 
