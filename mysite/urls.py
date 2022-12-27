@@ -16,9 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from base import views
+from user_authentication.views import signup_user, login_user, logout_user, dashboard, update_profile
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    # include('base.urls'),
+    path('signup/', signup_user, name="register"),
+    path('login/', login_user, name="login"),
+    path('logout/', logout_user, name="logout"),
+    path('dashboard/', dashboard, name="dashboard"),
+    path('update-profile/', update_profile, name="update_profile"),
 ]
