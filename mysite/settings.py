@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'base',
     'user_authentication',
+    'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
@@ -168,7 +169,6 @@ GOOGLE_RECAPTCHA_SITE_KEY = env('GOOGLE_RECAPTCHA_SITE_KEY')
 GOOGLE_RECAPTCHA_SECRET_KEY = env('GOOGLE_RECAPTCHA_SECRET_KEY')
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
 # avoid csrf token error
 CSRF_TRUSTED_ORIGINS = [
     'https://heart-charity.up.railway.app/',
@@ -179,4 +179,4 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
-SITE_ID=1
+SITE_ID=2
