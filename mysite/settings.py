@@ -31,7 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-rc^*w^w&6g9_(uvx#6s*bnt!w)l0rdi%!l7mv#y%uc&x%wo5pk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -171,9 +171,8 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # avoid csrf token error
 CSRF_TRUSTED_ORIGINS = [
-    'https://youtubers-academy.up.railway.app',
+    'https://heart-charity.up.railway.app/',
     'https://localhost:8000',
-    'https://suraj1089-bug-free-fiesta-949rgxg46vpcpq4j-8000.preview.app.github.dev',
 ]
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
