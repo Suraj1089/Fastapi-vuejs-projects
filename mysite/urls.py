@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.urls import path,include
 from base import views
 from user_authentication.views import signup_user, login_user, logout_user, dashboard, update_profile
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,3 +30,6 @@ urlpatterns = [
     path('dashboard/', dashboard, name="dashboard"),
     path('update-profile/', update_profile, name="update_profile"),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
