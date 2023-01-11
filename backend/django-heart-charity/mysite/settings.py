@@ -16,7 +16,7 @@ from django.contrib.messages import constants as messages
 import environ
 
 env = environ.Env()
-# reading .env file
+# reading .env file (if exists)
 environ.Env.read_env()
 
 
@@ -142,15 +142,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'statcfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'mysite/static')
+    os.path.join(BASE_DIR, 'static')
 ]
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# Default primary key field type
+# Default primary key 
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
@@ -169,3 +170,14 @@ GOOGLE_RECAPTCHA_SITE_KEY = env('GOOGLE_RECAPTCHA_SITE_KEY')
 GOOGLE_RECAPTCHA_SECRET_KEY = env('GOOGLE_RECAPTCHA_SECRET_KEY')
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# avoid csrf token error
+CSRF_TRUSTED_ORIGINS = [
+    'https://heart-charity.up.railway.app/',
+    'https://localhost:8000',
+]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+SITE_ID=2

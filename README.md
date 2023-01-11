@@ -1,6 +1,6 @@
 ## Heart-Charity
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/GB6Eki?referralCode=U5zXSw)
+[![Deploy on Railway](https://railway.app/button.svg)](https://heart-charity.up.railway.app/)
 
 github-link - https://github.com/Suraj1089/Heart-Charity
 
