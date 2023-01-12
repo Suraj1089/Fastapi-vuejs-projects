@@ -1,14 +1,6 @@
-## Heart-Charity
+# Django and Vue Js
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://heart-charity.up.railway.app/)
-
-github-link - https://github.com/Suraj1089/Heart-Charity
-
-
-https://user-images.githubusercontent.com/85509795/205125068-cafe9694-9099-442e-895b-618c91aa2a96.mp4
-
-
-
+with html and css can be found at - 
 
 ## Table of Contents
 
