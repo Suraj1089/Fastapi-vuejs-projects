@@ -21,15 +21,18 @@
                 </div>
             </div>
         </div>
+    <CardsVue />
     </div>
-    
 
                             
 </template>
 
 <script>
+import CardsVue from '../components/CardsVue.vue'
 export default {
-
+    components: {
+        CardsVue
+    }
 }
 </script>
 
