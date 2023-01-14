@@ -24,6 +24,8 @@
         <a href="#" class="right-arrow" @click="goToNextPage"></a>
       </div>
     </div>
+    <span v-if="isAuthenticated">Hi user you are authenticated </span>
+    <button class="get-started-button">Get Started</button>
   </div>
 </template>
 
@@ -32,7 +34,8 @@ export default {
   name: "HomeVue",
   data () {
     return {
-        carsoulShowing: 0
+        carsoulShowing: 0,
+        isAuthenticated: true
     }
   },
   methods: {
@@ -49,6 +52,17 @@ export default {
 </script>
 
 <style scoped>
+.get-started-button {
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+  background-color: #f5f5f5;
+  border: 1px solid #000;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
 /* add sliding animation */
 .carsoul-arrows {
   display: flex;

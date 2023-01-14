@@ -6,16 +6,25 @@
           <li><router-link to="/contact">Contact</router-link></li>
           <li><router-link to="/donate">Donate</router-link></li>
           <!-- user image -->
-         <li><img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="user-logo"></li>
+         <li><img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="user-logo" v-on:click="isProfileOpen=true"></li>
       </ul>
-    
   </div>
 </template>
 
 <script>
 
 export default {
-  name: 'NavBar'
+  name: 'NavBar',
+  data() {
+    return {
+      isProfileOpen: false
+    }
+  },
+  methods: {
+    
+  }
+     
+    
 }
 </script>
 
